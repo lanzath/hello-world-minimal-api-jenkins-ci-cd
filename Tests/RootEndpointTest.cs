@@ -15,7 +15,7 @@ public class RootEndpointTest : IClassFixture<Program>
         var response = await client.GetAsync("/api/v1/");
         var result = await response.Content.ReadFromJsonAsync<Response>();
 
-        Assert.Equal("Hello World!", result?.Message);
+        Assert.Equal("Hello World!!", result?.Message);
         Assert.Equal(HttpStatusCode.OK, response.StatusCode);
     }
 
